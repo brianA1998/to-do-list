@@ -4,5 +4,15 @@ const ul = document.querySelector('ul');
 const empty = document.querySelector('.empty');
 
 addBtn.addEventListener('Click', (e) => {
-    console.log(1);
+    e.preventDefault();
+    
+
+    const text = input.value;
+    const li = document.createElement('li');
+    const p = document.createElement('p');
+    p.textContent = text;
+
+    li.appendChild(p);
+    ul.appendChild(li);
+
 });
